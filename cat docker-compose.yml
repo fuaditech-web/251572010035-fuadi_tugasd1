@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        FULL_NAME: "Muhamad Fuadi Ma'suf"
+        ROLE: "Mahasiswa Sistem Informasi"
+        UNIVERSITY: "STMIK TAZKIA"
+        SEMESTER: "2"
+        EMAIL: "251572010035fuadi@student.stmik.tazkia.ac.id"
+        LOCATION: "Purworejo, Jawa Tengah"
+        BIO: "Mahasiswa Sistem Informasi semester 2 yang tertarik pada Cloud Computing, Docker, Linux, dan DevOps."
+        SKILLS: "Docker, Linux, Networking, Git, HTML, CSS"
+    ports:
+      - "8203:80"
+    container_name: fuadi-web
+    restart: unless-stopped
